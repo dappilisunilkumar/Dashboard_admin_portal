@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  body{
+    background-color: aliceblue;
+  }
+.main {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+    gap: 0.5rem;
+}
+input {
+  width: 200px;
+  height: 34px;
+  border-radius: 10px;
+  padding: 0 0.6rem;
+  border: 2px solid chocolate;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus {
+  border-color: orangered;
+  box-shadow: 0 0 6px rgba(255, 69, 0, 0.4);
+}
+input::placeholder {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+
+button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  background-color: orangered;
+  color: whitesmoke;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+
+/* Container grid */
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Card style */
+.card {
+  background: #edd5d5;
+  border-radius: 10px;
+  padding: 1rem;margin: 2%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Text */
+.sid {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.sname {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Common button */
+
+.btn {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #dd2476, #ff512f);
+}
+
+/* Click effect */
+.btn:active {
+  transform: scale(0.97);
+}
+
+
+
+
+
+
+
+</style>
+<body>
+
+    
+    <div class="main">
+    <input type="hidden" id="studentId"><br>
+    <input type="text" placeholder="Enter Name" id="name"><br>
+    <input type="text" placeholder="Enter Url Image Link" id="image"><br>
+    <button onclick="saveData()">PushData</button>
+     <button class="btn">
+  <a href="./user.html">Click user Data</a>
+</button>
+    
+    </div>
+    <div id="container"></div>
+   
+
+    <script src="./admin.js"></script>
+    
+</body>
+</html>

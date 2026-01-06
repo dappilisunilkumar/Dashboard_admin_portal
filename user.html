@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* page bg */
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+}
+
+/* title */
+.portal-title{
+    text-align: center;
+    color: orangered;
+    font-size: 32px;
+    margin: 30px 0;
+    letter-spacing: 2px;
+}
+
+/* 🔥 main fix */
+.container{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* card */
+.card{
+    width: 220px;
+    padding: 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+   margin: 10px;
+   /* border: 2px solid black; */
+}
+
+/* image */
+.profile-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* name */
+.name{
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+}
+.btn {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #dd2476, #ff512f);
+}
+
+/* Click effect */
+.btn:active {
+  transform: scale(0.97);
+}
+@media (max-width: 480px) {
+  .portal-title{
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .btn{
+    width: 90%;
+    padding: 12px 20px;
+  }
+
+  .btn a{
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+</style>
+<body>
+    
+    <div id="container">
+            <button class="btn">
+  <a href="./admin.html">Click Admin Dashboard</a>
+</button>
+
+        <h1 class="portal-title">user poratl</h1>
+    </div>
+
+    <script src="./user.js"></script>
+    
+</body>
+</html>
